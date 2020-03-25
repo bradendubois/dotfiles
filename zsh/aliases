@@ -2,6 +2,7 @@
 where better-auto-color-ls > /dev/null;
 if [ $? ]; then
     alias ls="colorls -A  --gs --sd"
+    alias tree="ls --tree"
 fi
 
 # Alias path to nice_path if it's found
@@ -10,9 +11,37 @@ if [ $? ]; then
     alias path="nice_path"
 fi
 
+alias weather="curl wttr.in/Saskatoon"  # Check the weather
+alias parrot="curl parrot.live"         # It's kinda fun
 
-# Check the weather
-alias weather="curl wttr.in/Saskatoon"
+# Move up a level
+alias ..="cd .."
 
-# It's kinda fun
-alias parrot="curl parrot.live"
+# exa is a replacement for ls
+alias exa="exa --sort=type --tree -L=2 --color=auto" 
+alias exalong="exa --long --tree --sort=type -L=2"
+
+# better (cuter) than just 'sudo'
+alias pls="sudo"
+alias plz="sudo"
+alias please="sudo"
+
+# needs spotify-cli installed: https://github.com/pwittchen/spotify-cli-linux
+alias playing="spotifycli --status"
+alias play="spotifycli --play"
+alias pause="spotifycli --pause"
+alias skip="spotifycli --next"
+
+# audio
+alias volume="pulsemixer --get-volume | cut -d ' ' -f 1"
+alias volumeup="pulsemixer --change-volume +5"
+alias volumedown="pulsemixer --change-volume -5"
+alias mute="pactl set-sink-mute @DEFAULT_SINK@ 1"
+alias unmute="pactl set-sink-mute @DEFAULT_SINK@ 0"
+
+# calcurse is a great todo/planner
+alias todo="calcurse"
+
+alias close="exit"
+
+alias get="pacaur -S "
