@@ -37,7 +37,7 @@ By default, antigen will install and run the following:
   * [Valiev/almostontop](https://github.com/Valiev/almostontop)
   * [Cloudstek/zsh-plugin-appup](https://github.com/Cloudstek/zsh-plugin-appup)
   * [arzzen/calc.plugin.zsh](https://github.com/arzzen/calc.plugin.zsh)
-  * [ael-code/zsh-colored-man-pages]](https://github.com/ael-code/zsh-colored-man-pages)
+  * [ael-code/zsh-colored-man-pages](https://github.com/ael-code/zsh-colored-man-pages)
   * [zsh-users/zsh-completions](https://github.com/zsh-users/zsh-completions)
   * [igoradamenko/npm.plugin.zsh](https://github.com/igoradamenko/npm.plugin.zsh)
 
@@ -62,7 +62,7 @@ Next, navigate to the location of the cloned repository:
 cd <dotfile_location>
 ```
 
-***All remaining commands given will assume that the user's current working directory is still the root of the ``dotfiles`` repository. 
+***All remaining commands given will assume that the user's current working directory is still the root of the ``dotfiles`` repository.*** 
 
 Open the file ``zshrc`` in your text editor of choice. Near the top, edit the following line:
 ```sh
