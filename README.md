@@ -25,7 +25,7 @@ Everything else is either already there or will be installed.
 
 What's all in the box?
 
-My ``zshrc`` file relies on ``[antigen](https://github.com/zsh-users/antigen)``, which has been exceptionally easy to set up, modify, and use in customizing everything.
+My ``zshrc`` file relies on [antigen](https://github.com/zsh-users/antigen), which has been exceptionally easy to set up, modify, and use in customizing everything.
 
 By default, antigen will install and run the following:
 
