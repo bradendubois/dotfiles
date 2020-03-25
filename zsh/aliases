@@ -1,0 +1,18 @@
+# Alias ls to colorls if it's found
+where better-auto-color-ls > /dev/null;
+if [ $? ]; then
+    alias ls="colorls -A  --gs --sd"
+fi
+
+# Alias path to nice_path if it's found
+where nice_path > /dev/null;
+if [ $? ]; then
+    alias path="nice_path"
+fi
+
+
+# Check the weather
+alias weather="curl wttr.in/Saskatoon"
+
+# It's kinda fun
+alias parrot="curl parrot.live"

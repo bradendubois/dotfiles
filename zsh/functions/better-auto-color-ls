@@ -1,0 +1,10 @@
+# "Inspired by" (read: a modified version of) auto-color-ls
+# See: https://github.com/gretzky/auto-color-ls
+
+# I just wanted different colorls parameters and no extra newline
+function better-auto-color-ls() {
+	emulate -L zsh
+	colorls -A  --gs --sd
+}
+
+export chpwd_functions=(better-auto-color-ls $chpwd_functions)
