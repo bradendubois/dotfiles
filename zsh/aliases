@@ -1,7 +1,7 @@
 # Alias ls to colorls if it's found
 where better-auto-color-ls > /dev/null;
 if [ $? ]; then
-    alias ls="colorls -A  --gs --sd"
+    alias ls="colorls --gs --sd"
     alias tree="ls --tree"
 fi
 
@@ -18,7 +18,7 @@ alias parrot="curl parrot.live"         # It's kinda fun
 alias ..="cd .."
 
 # exa is a replacement for ls
-alias exa="exa --sort=type --tree -L=2 --color=auto" 
+alias exa="exa --sort=type --tree -L=2 --color=auto"
 alias exalong="exa --long --tree --sort=type -L=2"
 
 # better (cuter) than just 'sudo'

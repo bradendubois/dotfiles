@@ -4,7 +4,7 @@
 # I just wanted different colorls parameters and no extra newline
 function better-auto-color-ls() {
 	emulate -L zsh
-	colorls -A  --gs --sd
+	colorls --gs --sd
 }
 
 export chpwd_functions=(better-auto-color-ls $chpwd_functions)

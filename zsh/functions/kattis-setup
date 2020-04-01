@@ -1,0 +1,28 @@
+#!/bin/zsh
+
+# Initialize a directory to work on a Kattis problem
+
+function kattis_go() {
+    local DIR=$(pwd | tr "/" " " | rev | cut -d" " -f1 | rev)
+    
+    touch $DIR.$1
+    echo $DIR.$1
+
+    for i in `seq 1 $2`;
+    do;
+        echo sample$i
+        touch sample$i
+    done;
+
+    echo README.md
+    touch README.md
+
+    echo "# " >> README.md
+    echo >> README.md
+    echo "**Problem**: [$DIR](https://open.kattis.com/problems/$DIR)" >> README.md
+    echo >> README.md
+    echo "**Difficulty**: " >> README.md
+    echo >> README.md
+    echo "## Solution" >> README.md
+    echo >> README.md
+}
