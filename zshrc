@@ -63,7 +63,6 @@ antigen use oh-my-zsh
 # These are all part of oh-my-zsh
 antigen bundle git
 antigen bundle wd
-antigen bundle thefuck
 
 antigen bundle Valiev/almostontop
 antigen bundle Cloudstek/zsh-plugin-appup
