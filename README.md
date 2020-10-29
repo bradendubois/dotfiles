@@ -1,19 +1,14 @@
 # dotfiles
 
-A collection the dotfiles I use in my daily workflow. A bit different from [arch-setup](https://github.com/bradendubois/arch-setup)'s [dotfiles](https://github.com/bradendubois/arch-setup/tree/master/dotfiles); I've switched to [zsh](https://en.wikipedia.org/wiki/Z_shell).
+A collection the dotfiles I use in my daily workflow.
 
 ![](screenshot.png)
 
-## Contents
-
-* [Requirements](#requirements)
-* [Dependencies](#dependencies)
-* [Installation](#installation)
-* [Acknowledgements](#acknowledgements) 
-
 ## Requirements
 
-To set everything up, you'll need:
+### ZSH
+
+The pre-requisites for my ``zsh`` configuration are:
 
 * [ruby](https://www.ruby-lang.org/en/) and [rubygems](https://rubygems.org/)
 * [pip](https://pypi.org/project/pip/)
@@ -21,9 +16,16 @@ To set everything up, you'll need:
 
 Everything else is either already there or will be installed.
 
-## Dependencies
+## Dotfiles
 
-What's all in the box?
+Dotfiles are given for the following:
+
+* [bwpsm](https://github.com/baskerville/bspwm)
+* [sxhkd](https://github.com/baskerville/sxhkd)
+* [rofi](https://github.com/davatorium/rofi)
+* [polybar](https://github.com/polybar/polybar)
+
+### zsh
 
 My ``zshrc`` file relies on [antigen](https://github.com/zsh-users/antigen), which has been exceptionally easy to set up, modify, and use in customizing everything.
 
@@ -32,7 +34,6 @@ By default, antigen will install and run the following:
 * Standard [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) plugins:
   * git
   * wd
-  * thefuck
 * Non-default plugins:
   * [Valiev/almostontop](https://github.com/Valiev/almostontop)
   * [Cloudstek/zsh-plugin-appup](https://github.com/Cloudstek/zsh-plugin-appup)
@@ -49,7 +50,13 @@ Pip is used to install [pwittchen/spotify-cli-linux](https://github.com/pwittche
 
 ## Installation
 
-Here's how one can use this repo as a starting point for their own machine.
+### dotfiles
+
+For any of the dotfiles in ``.config``, the directory can be put in one's own home directory's ``.config``. For example. if one wanted to use my bspwmrc file, located in this repository at ``.config/bspwm/bspwmrc``, it would go to ``$HOME/.config/bspwm/bspwmrc``.
+
+### zsh
+
+Here's how one can use this repo as a starting point for their own machine's zsh setup.
 
 To begin, you'll want to go ahead and clone the project:
 ```sh
