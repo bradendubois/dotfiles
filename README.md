@@ -4,9 +4,13 @@ A collection the dotfiles I use in my daily workflow.
 
 ![](screenshot.png)
 
+My current setup is using [bwpsm](https://github.com/baskerville/bspwm) as my window manager, [sxhkd](https://github.com/baskerville/sxhkd), [rofi](https://github.com/davatorium/rofi) as a launcher, and [polybar](https://github.com/polybar/polybar) as a status bar.
+
 ## Requirements
 
-### ZSH
+See the respective pages for [bwpsm](https://github.com/baskerville/bspwm) / [sxhkd](https://github.com/baskerville/sxhkd) / [rofi](https://github.com/davatorium/rofi) / [polybar](https://github.com/polybar/polybar) for dependencies, or consider using a package manager like the [AUR](https://aur.archlinux.org/) with [yay](https://github.com/Jguer/yay) to make installation of these easier, if running something like [Arch](https://www.archlinux.org/) / [Manjaro](https://manjaro.org/) / [Artix](https://artixlinux.org/)
+
+### zsh
 
 The pre-requisites for my ``zsh`` configuration are:
 
@@ -25,11 +29,13 @@ Dotfiles are given for the following:
 * [rofi](https://github.com/davatorium/rofi)
 * [polybar](https://github.com/polybar/polybar)
 
+These can be located in [``.config``](https://github.com/bradendubois/dotfiles/tree/master/.config).
+
 ### zsh
 
 My ``zshrc`` file relies on [antigen](https://github.com/zsh-users/antigen), which has been exceptionally easy to set up, modify, and use in customizing everything.
 
-By default, antigen will install and run the following:
+By default, antigen will install the following:
 
 * Standard [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) plugins:
   * git
@@ -52,9 +58,9 @@ Pip is used to install [pwittchen/spotify-cli-linux](https://github.com/pwittche
 
 ### dotfiles
 
-For any of the dotfiles in ``.config``, the directory can be put in one's own home directory's ``.config``. For example. if one wanted to use my bspwmrc file, located in this repository at ``.config/bspwm/bspwmrc``, it would go to ``$HOME/.config/bspwm/bspwmrc``.
+For any of the dotfiles in [``.config``](https://github.com/bradendubois/dotfiles/tree/master/.config), the directory can be put in one's own home directory's ``.config``. For example. if one wanted to use my bspwmrc file, located in this repository at [``.config/bspwm/bspwmrc``](https://github.com/bradendubois/dotfiles/blob/master/.config/bspwm/bspwmrc), it would go to ``$HOME/.config/bspwm/bspwmrc``.
 
-### zsh
+### zsh setup
 
 Here's how one can use this repo as a starting point for their own machine's zsh setup.
 
@@ -118,3 +124,4 @@ And with that, starting a new terminal instance should install all the antigen p
 ## Acknowledgements
 
 * The repository [unixorn/awesome-zsh-plugins](https://github.com/unixorn/awesome-zsh-plugins#plugins) provided an awesome starting point for finding tons of incredibly useful plugins.
+* The subreddit [r/unixporn](https://www.reddit.com/r/unixporn/) is exceptionally creative and provides many great dotfiles setups to take (rightfully attributed!) inspiration from.
