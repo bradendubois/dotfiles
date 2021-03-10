@@ -1,0 +1,17 @@
+# zsh plugins
+
+# oh-my-zsh plugin
+ohmyzsh/ohmyzsh path:plugins/wd
+
+# plugins
+Valiev/almostontop
+Cloudstek/zsh-plugin-appup
+arzzen/calc.plugin.zsh
+ael-code/zsh-colored-man-pages
+zsh-users/zsh-completions
+athityakumar/colorls
+zsh-users/zsh-autosuggestions
+
+# geometry theme
+geometry-zsh/geometry
+

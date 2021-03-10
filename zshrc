@@ -1,96 +1,35 @@
 #!/bin/zsh
 
-###############################################################
-#                        main commands                        #
-###############################################################
+# Declare location of dotfiles (this folder!)
+export DOTFILES="$HOME/dotfiles"
 
-                ##############################
-                #         variables          #
-                ##############################
+# Directory of zsh-specific resources
+export ZSH=$DOTFILES/zsh
 
-export DOTFILES="$HOME/dotfiles"  # Declare location of dotfiles (this folder!)
-export ZSH_DIR=$DOTFILES/zsh      # Directory of zsh-specific resources
+CONFIGS=$ZSH/configs
+FUNCTIONS=$ZSH/functions
 
-CUSTOM_CONFIGS=$ZSH_DIR/configs      # Directory of custom config files
-CUSTOM_FUNCTIONS=$ZSH_DIR/functions  # Directory of custom functions
-CUSTOM_ALIASES=$ZSH_DIR/aliases      # All aliases
-CUSTOM_PATH=$ZSH_DIR/path            # All path additions
-
-
-                ##############################
-                #         sourcing           #
-                ##############################
+ALIASES=$ZSH/aliases
+PATHS=$ZSH/path
 
 # Source all custom configs
-for config in $CUSTOM_CONFIGS/*; do
-  if [ -f $config ]; then
+for config in $CONFIGS/*; do
     source $config
-  fi
 done
 
 # Source all functions
-for function in $CUSTOM_FUNCTIONS/*; do
-  if [ -f $function ]; then
+for function in $FUNCTIONS/*; do
     source $function
-  fi
 done
 
+# source all aliases
+source $ALIASES
+
 # Add any extra paths to, uh, $PATH
-if [ -f $CUSTOM_PATH ]; then
-  source $CUSTOM_PATH
-fi
+source $PATHS
 
-# Source all aliases
-if [ -f $CUSTOM_ALIASES ]; then
-  source $CUSTOM_ALIASES
-fi
+# Run the following command (once!) to create the following .sh file
+# antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh
 
-###############################################################
-#                           antigen                           #
-###############################################################
-
-source $ZSH_DIR/antigen.zsh
-
-                ##############################
-                #          bundles           #
-                ##############################
-
-# Save aliases to avoid oh-my-zsh overrides
-save_aliases=$(alias -L)
-
-antigen use oh-my-zsh
-
-# These are all part of oh-my-zsh
-antigen bundle git
-antigen bundle wd
-
-antigen bundle Valiev/almostontop
-antigen bundle Cloudstek/zsh-plugin-appup
-antigen bundle arzzen/calc.plugin.zsh
-antigen bundle ael-code/zsh-colored-man-pages
-antigen bundle zsh-users/zsh-completions
-antigen bundle igoradamenko/npm.plugin.zsh
-antigen bundle athityakumar/colorls
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-
-                ##############################
-                #                            #
-                #   ^                        #
-                #  / \    geometry is nice   #
-                # /___\                      #
-                #                            #
-                ##############################
-
-# Load the geometry theme
-antigen theme geometry-zsh/geometry
-
-                ##############################
-                #         applying           #
-                ##############################
-
-antigen apply
-
-# Unset all the aliases added by oh-my-zsh
-eval $save_aliases; unset save_aliases
+source $ZSH/zsh_plugins.sh
 

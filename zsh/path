@@ -1,3 +1,9 @@
+additions=(
+    ~/.gem/ruby/2.7.0/bin
+    ~/.local/bin
+)
 
-PATH=$PATH:~/.gem/ruby/2.7.0/bin
-PATH=$PATH:~/.local/bin
+for addition in $additions; do
+    PATH=$PATH:$addition
+done
+
