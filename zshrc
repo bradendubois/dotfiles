@@ -71,6 +71,8 @@ antigen bundle ael-code/zsh-colored-man-pages
 antigen bundle zsh-users/zsh-completions
 antigen bundle igoradamenko/npm.plugin.zsh
 antigen bundle athityakumar/colorls
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
 
                 ##############################
                 #                            #
