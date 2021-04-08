@@ -17,15 +17,6 @@ alias parrot="curl parrot.live"         # It's kinda fun
 # Move up a level
 alias ..="cd .."
 
-# exa is a replacement for ls
-alias exa="exa --sort=type --tree -L=2 --color=auto"
-alias exalong="exa --long --tree --sort=type -L=2"
-
-# better (cuter) than just 'sudo'
-alias pls="sudo"
-alias plz="sudo"
-alias please="sudo"
-
 # needs spotify-cli installed: https://github.com/pwittchen/spotify-cli-linux
 alias playing="spotifycli --status"
 alias play="spotifycli --play"
@@ -39,9 +30,11 @@ alias volumedown="pulsemixer --change-volume -5"
 alias mute="pactl set-sink-mute @DEFAULT_SINK@ 1"
 alias unmute="pactl set-sink-mute @DEFAULT_SINK@ 0"
 
-# calcurse is a great todo/planner
-alias todo="calcurse"
-
-alias close="exit"
-
-alias get="pacaur -S "
+# git
+alias commit="git commit -S -m "
+alias push="git push "
+alias add="git add "
+alias pull="git pull "
+alias checkout="git checkout "
+alias branch="git branch "
+alias status="git status "
