@@ -7,7 +7,12 @@
     "explorer.confirmDragAndDrop": false,
     "window.zoomLevel": 0,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "workbench.editorAssociations": [],
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
     "workbench.startupEditor": "newUntitledFile",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
