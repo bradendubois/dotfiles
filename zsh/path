@@ -1,9 +1,10 @@
-additions=(
+directories=(
     ~/.gem/ruby/2.7.0/bin
     ~/.local/bin
+    /opt/riscv/bin
 )
 
-for addition in $additions; do
-    PATH=$PATH:$addition
+for directory in $directories; do
+    [ -d $addition ] && PATH=$PATH:$directory
 done
 
