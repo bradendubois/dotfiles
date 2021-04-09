@@ -29,7 +29,7 @@ Dotfiles are given for the following:
 * [rofi](https://github.com/davatorium/rofi)
 * [polybar](https://github.com/polybar/polybar)
 
-These can be located in [``config``](https://github.com/bradendubois/dotfiles/tree/master/config).
+These can be located in [``config``](./config).
 
 ### zsh
 
@@ -55,7 +55,7 @@ The ``zshrc`` file relies on [antibody](https://getantibody.github.io/) to manag
 
 ### dotfiles
 
-For any of the dotfiles in [``config``](https://github.com/bradendubois/dotfiles/tree/master/config), the directory can be put in one's own home directory's ``.config``. For example. if one wanted to use [``my bspwmrc file``](https://github.com/bradendubois/dotfiles/blob/master/config/bspwm/bspwmrc), it would go to ``$HOME/.config/bspwm/bspwmrc``.
+For any of the dotfiles in [``config``](./config), the directory can be put in one's own home directory's ``.config``. For example. if one wanted to use [``my bspwmrc file``](./config/bspwm/bspwmrc), it would go to ``$HOME/.config/bspwm/bspwmrc``.
 
 ### zsh setup
 
