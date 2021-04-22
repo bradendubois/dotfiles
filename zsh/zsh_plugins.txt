@@ -14,4 +14,3 @@ zsh-users/zsh-autosuggestions
 
 # geometry theme
 geometry-zsh/geometry
-
