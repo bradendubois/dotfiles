@@ -17,9 +17,21 @@
 super + Return
 	alacritty
 
-# Program launcher - rofi
+# Terminal Emulator - alacritty
 super + @space
-	rofi -show combi
+	alacritty
+
+# Program launcher - rofi - run (open new programs)
+super + r
+	rofi -show run
+
+# Program launcher - rofi - window (running programs)
+super + d
+	rofi -show window
+
+# Program launcher - Thunar - file explorer
+super + e
+	Thunar
 
 # Reload sxhkd
 super + Escape
@@ -28,6 +40,10 @@ super + Escape
 # Change wallpapers
 super + ctrl + w
 	feh --randomize --bg-fil --recursive pictures/wallpapers
+
+# Audio Control
+super + alt + s
+	pavucontrol
 
 ###################################
 #              bspwm              #
@@ -51,7 +67,7 @@ super + y
 
 # swap the current node and the biggest window
 super + g
-	bspc node -s biggest.window
+	bspc node -s biggest.window.local
 
 
 ####################################
@@ -86,20 +102,40 @@ super + {_,shift + }c
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
+super + button{4,5}
+	bspc desktop -f {next,prev}.local
+
+# focus the next/previous monitor
+super + shift + bracket{left,right} 
+	bspc monitor -f {prev,next}
+super + shift + button{4,5}
+	bspc monitor -f {next, prev}
+
+# move focussed window to prev/next workspace; focus this node in new workspace
+super + alt + bracket{left,right}
+    id=$(bspc query --nodes --node); \
+    bspc node -d {prev,next}.local; \
+    bspc desktop -f {prev,next}.local; \
+    bspc node -f ${id}
+
+# only move focussed window to prev/next workspace
+alt + bracket{left,right}
+    bspc node -d {prev,next}.local
+
 
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+# super + {o,i}
+#	bspc wm -h off; \
+#	bspc node {older,newer} -f; \
+#	bspc wm -h on
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+# focus or send to the given monitor
+super + {_,shift + }{1-3}
+	bspc {monitor -f,node -m} '^{1-3}'
 
 
 ####################################
@@ -146,15 +182,18 @@ super + {Left,Down,Up,Right}
 
 # Raise / Lose Volume
 XF86Audio{Raise,Lower}Volume
-	pactl set-sink-volume @DEFAULT_SINK@ {+5%, -5%}
+    pactl set-sink-volume @DEFAULT_SINK@ {+5%, -5%}
 
 # Playerctl : Play/Prev/Next/Stop
 XF86Audio{Play,Prev,Next,Stop}
-        playerctl {play-pause, previous, next, stop}
+    playerctl {play-pause, previous, next, stop}
 
 # TODO - Switching outputs
 super + alt + Prior
-	pactl set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo
+    pactl set-default-sink alsa_output.pci-0000_00_1b.0.analog-stereo
 
 super + alt + Next
-	pactl set-default-sink alsa_output.usb-Nuforce_Inc._NuForce_USB_Audio-01.analog-stereo
+    pactl set-default-sink alsa_output.usb-Nuforce_Inc._NuForce_USB_Audio-01.analog-stereo
+
+super + Print
+    mss # && dunstify "Screenshot taken!"
