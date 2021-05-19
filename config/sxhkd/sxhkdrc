@@ -197,3 +197,8 @@ super + alt + Next
 
 super + Print
     mss # && dunstify "Screenshot taken!"
+
+# Polybar
+
+super + shift + y
+    {polybar-msg cmd toggle; bspc config -m DP-2 top_padding +0, polybar-msg cmd toggle; bspc config -m DP-2 top_padding 20}
