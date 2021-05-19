@@ -20,8 +20,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   # padding:
-  x: 115
-  y: 115
+  x: 0
+  y: 0
 
   # Window decorations
   #
@@ -139,6 +139,7 @@ colors:
   primary:
     background: '#1d1f21'
     foreground: '#c5c8c6'
+    # foreground: '#ffffff'
 
     # Bright and dim foreground colors
     #
