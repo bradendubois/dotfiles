@@ -1,6 +1,4 @@
-
-
-
+; hello;
 ;======================;
 ;        Colors        ;
 ;======================;
@@ -41,9 +39,8 @@ deep-orange = #D84315
 
 [bar/primary]
 
-; monitor =
-; monitor-fallback =
-; monitor-exact = true
+monitor = DP-2
+monitor-exact = true
 
 ; Tell the Window Manager not to configure the window.
 ;override-redirect = true
@@ -68,10 +65,10 @@ padding = 3
 ;      Dimensions      ;
 ;======================;
 
-width = 98%:-4
+width = 98.8%
 height = 30
 
-offset-x = 1%:1
+offset-x = 0.6%
 offset-y = 1%
 
 ;======================;
@@ -216,7 +213,7 @@ interval = 1
 
 date = %H:%M
 
-; format-background = ${color.pink}
+;format-background = ${color.blue}
 format-padding = 1
 
 format-prefix = " "
@@ -241,9 +238,9 @@ type = internal/memory
 ; Seconds to sleep between updates
 interval = 3
 
-format-underline = ${color.blue}
+;format-background = ${color.yellow}
 
-label = " %gb_used% %percentage_used%%"
+label = "RAM %gb_used%"
 
 ;==================;
 ;        CPU       ;
@@ -257,9 +254,10 @@ type = internal/cpu
 ;   %percentage-sum% - Cumulative load on all cores
 ;   %percentage-cores% - load percentage for each core
 ;   %percentage-core[1-9]% - load percentage for specific core
-label = "  %percentage%%"
+label = "CPU %percentage%%"
 
-format-underline = ${color.green}
+;format-background = ${color.green}
+; format-underline = ${color.green}
 
 ;==================;
 ;    PulseAudio    ;
@@ -270,23 +268,18 @@ type = internal/pulseaudio
 
 interval = 5
 
-label-muted = "  🔇"
-label-muted-foreground = #aaa
-
 ; Empty speaker for low volume
 ; ramp-volume-0 = 
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+;ramp-volume-0 = 
+;ramp-volume-1 = 
+;ramp-volume-2 = 
 
-format-volume = <ramp-volume> <label-volume>
-format-muted = <label-muted>
+format-volume = <label-volume>
+;format-muted = <label-volume>
 
 label-volume = %percentage%%
-
-format-underline = ${color.green}
-
+;label-volume-background = ${color.white}
 
 ;================;
 ;     Network    ;
@@ -295,15 +288,12 @@ format-underline = ${color.green}
 [module/network]
 type = internal/network
 interface = enp5s0
+
 label-connected =  %downspeed%  %upspeed%
+;label-connected-background = ${color.green}
+
 label-disconnected =  Not Connected
-
-format-underline = ${color.green}
-
-
-
-
-
+;label-disconnected-background = ${color.green}
 
 
 ;===============================;
