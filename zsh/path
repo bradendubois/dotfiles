@@ -1,5 +1,6 @@
 directories=(
     ~/.gem/ruby/2.7.0/bin
+    ~/.gem/ruby/3.0.0/bin
     ~/.local/bin
     /opt/riscv/bin
     ~/.cargo/bin
