@@ -11,7 +11,8 @@ bspc config border_width         3
 #bspc config window_gap         28
 bspc config window_gap 			16
 
-bspc config focus_follows_pointer     false
+bspc config focus_follows_pointer     true
+# bspc config pointer_follows_focus     true
 bspc config ignore_wemh_focus        true
 
 #bspc config -m DP-2 top_padding 30

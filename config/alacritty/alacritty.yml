@@ -19,9 +19,10 @@ window:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  # padding:
-  x: 0
-  y: 0
+  padding:
+    x: 20
+    y: 20
+    dynamic_padding: true
 
   # Window decorations
   #
@@ -61,6 +62,7 @@ scrolling:
 
 # Font configuration
 font:
+  
   # Normal (roman) font face
   normal:
     # Font family
@@ -71,40 +73,24 @@ font:
     #   - (Windows) Consolas
     family: FiraCode Nerd Font
 
-    # The `style` can be specified to pick a specific face.
     style: Regular
 
-  # Bold font face
   # bold:
-    # Font family
-    #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: monospace
-
-    # The `style` can be specified to pick a specific face.
     #style: Bold
 
-  # Italic font face
   # italic:
-    # Font family
-    #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: monospace
-
-    # The `style` can be specified to pick a specific face.
     #style: Italic
 
-  # Bold italic font face
   # bold_italic:
-    # Font family
-    #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
     #family: monospace
-
-    # The `style` can be specified to pick a specific face.
     #style: Bold Italic
 
   # Point size
@@ -112,9 +98,9 @@ font:
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
-  #offset:
-  #  x: 0
-  #  y: 0
+  offset:
+    x: 0
+    y: 1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
@@ -137,7 +123,9 @@ colors:
   
   # Default colors
   primary:
-    background: '#1d1f21'
+    #background: '#1d1f21'
+    #background: '#1d2f41'
+    background: '#282c34'
     foreground: '#c5c8c6'
     # foreground: '#ffffff'
 

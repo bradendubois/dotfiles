@@ -63,7 +63,7 @@ super + m
 
 # send the newest marked node to the newest preselected node
 super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+	bspc node -n last.\!automatic -t tiled
 
 # swap the current node and the biggest window
 super + g
@@ -111,6 +111,10 @@ super + shift + bracket{left,right}
 super + shift + button{4,5}
 	bspc monitor -f {next, prev}
 
+# focus the last node/desktop
+super + {_,shift + } grave
+	bspc desktop -f {next, prev}.local
+
 # move focussed window to prev/next workspace; focus this node in new workspace
 super + alt + bracket{left,right}
     id=$(bspc query --nodes --node); \
@@ -121,11 +125,6 @@ super + alt + bracket{left,right}
 # only move focussed window to prev/next workspace
 alt + bracket{left,right}
     bspc node -d {prev,next}.local
-
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 # super + {o,i}
