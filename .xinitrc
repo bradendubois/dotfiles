@@ -32,29 +32,33 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# Fix for IntelliJ / Java AWT Apps
-wmname LG3D
-
 # Make the cursor not an X on spots like desktop area
 xsetroot -cursor_name left_ptr
 
 # Configure monitor layout
 xrandr --output DP-2 --primary --pos 1920x200
+
 xrandr --output HDMI-3 --pos 0x600
+# xrandr --output HDMI-1 --pos -1920x600
+
 xrandr --output DP-1 --right-of DP-2 --rotate left
 
 # Make sure displays won't blank
 xset -dpms s off
-
-# Load random wallpapers with feh
-feh --randomize --bg-fill --recursive pictures/wallpapers
-
-# Start picom
-# picom &
 
 # Start polybar
 ~/.config/polybar/launch.sh &
 
 # Load sxhkd and start bspwm
 exec sxhkd &
-exec bspwm
+exec bspwm &
+
+# Load random wallpapers with feh
+feh --randomize --bg-fill --recursive pictures/wallpapers &
+
+# Start picom
+picom &
+
+# Hide cursor after idling
+unclutter -idle 3 &
+
