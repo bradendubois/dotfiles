@@ -51,7 +51,6 @@ xset -dpms s off
 
 # Load sxhkd and start bspwm
 exec sxhkd &
-exec bspwm &
 
 # Load random wallpapers with feh
 feh --randomize --bg-fill --recursive pictures/wallpapers &
@@ -62,3 +61,4 @@ picom &
 # Hide cursor after idling
 unclutter -idle 3 &
 
+exec bspwm

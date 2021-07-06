@@ -122,9 +122,18 @@ super + alt + bracket{left,right}
     bspc desktop -f {prev,next}.local; \
     bspc node -f ${id}
 
+super + shift + alt + bracket{left,right}
+    id=$(bspc query --nodes --node); \
+    bspc node -m {prev,next}; \
+    bspc monitor -f {prev,next}; \
+    bspc node -f ${id}
+
 # only move focussed window to prev/next workspace
 alt + bracket{left,right}
     bspc node -d {prev,next}.local
+
+alt + shift + bracket{left,right}
+    bspc node -m {prev,next}
 
 # focus the older or newer node in the focus history
 # super + {o,i}
