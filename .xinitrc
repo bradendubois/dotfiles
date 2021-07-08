@@ -59,6 +59,6 @@ feh --randomize --bg-fill --recursive pictures/wallpapers &
 picom &
 
 # Hide cursor after idling
-unclutter -idle 3 &
+unclutter -idle 1 &
 
 exec bspwm

@@ -19,11 +19,13 @@ done
 # source all aliases
 source $ZSH/aliases
 
+# source all exports
+source $ZSH/exports
+
 # Add any extra paths to, uh, $PATH
 source $ZSH/path
 
 # Run the following command (once!) to create the following .sh file
 # antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh
-
 source $ZSH/zsh_plugins.sh
 

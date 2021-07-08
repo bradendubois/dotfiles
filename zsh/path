@@ -7,6 +7,6 @@ directories=(
 )
 
 for directory in $directories; do
-    [ -d $addition ] && PATH=$PATH:$directory
+    PATH=$PATH:$directory
 done
 
