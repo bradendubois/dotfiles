@@ -1,12 +1,7 @@
 #!/bin/bash
 
 sink=$(pacmd list-sinks | grep "* index" | sed 's/[^0-9]*//g')
-
-if [ $sink -eq '0' ]; then
-    sink=1
-else
-    sink=0
-fi
+sink=$(($sink ^ 1))
 
 pacmd list-sink-inputs | grep index | while read input
 do
