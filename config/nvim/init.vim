@@ -50,6 +50,8 @@ Plug 'metakirby5/codi.vim'
 Plug 'dkarter/bullets.vim'
 
 
+Plug 'lervag/vimtex'
+
 call plug#end()
 
 
