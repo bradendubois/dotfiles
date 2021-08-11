@@ -38,3 +38,6 @@ alias pull="git pull "
 alias checkout="git checkout "
 alias branch="git branch "
 alias status="git status "
+alias merge="git merge "
+alias stash="git stash "
+
