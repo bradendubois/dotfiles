@@ -21,6 +21,9 @@ source $ZSH/aliases
 
 # source all exports
 source $ZSH/exports
+if [ -f $ZSH/exports.local ]; then
+    source $ZSH/exports.local
+fi
 
 # Add any extra paths to, uh, $PATH
 source $ZSH/path
