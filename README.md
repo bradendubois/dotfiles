@@ -110,7 +110,7 @@ A list of extensions for [Visual Studio Code](https://code.visualstudio.com/) is
 cat config/code-extensions | xargs -n 1 code --install-extension
 ```
 
-Optionally, **keybindings** and **settings** are also provided in [config/Code\ -\ OSS/User/](config/Code\ -\ OSS/User/){[keybindings.json](keybindings.json), [settings.json](settings.json)}.
+Optionally, **keybindings** and **settings** are also provided in [config/Code/User/](config/Code/User/){[keybindings.json](config/Code/User/keybindings.json), [config/Code/User/settings.json](settings.json)}.
 
 #### Optional Extras
 
