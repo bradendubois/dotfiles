@@ -4,13 +4,27 @@ A collection the dotfiles I use in my daily workflow.
 
 ![](screenshot.png)
 
+## Getting Started
+
 My current setup is using [bwpsm](https://github.com/baskerville/bspwm) as my window manager, [sxhkd](https://github.com/baskerville/sxhkd), [rofi](https://github.com/davatorium/rofi) as a launcher, and [polybar](https://github.com/polybar/polybar) as a status bar.
 
-## Requirements
+My preferred shell is **zsh**. The ``zshrc`` file relies on [antibody](https://getantibody.github.io/) to manage plugins.
+
+* [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+* [Valiev/almostontop](https://github.com/Valiev/almostontop)
+* [Cloudstek/zsh-plugin-appup](https://github.com/Cloudstek/zsh-plugin-appup)
+* [arzzen/calc.plugin.zsh](https://github.com/arzzen/calc.plugin.zsh)
+* [ael-code/zsh-colored-man-pages](https://github.com/ael-code/zsh-colored-man-pages)
+* [zsh-users/zsh-completions](https://github.com/zsh-users/zsh-completions)
+* [athityakumar/colorls](https://github.com/athityakumar/colorls)
+* [igoradamenko/npm.plugin.zsh](https://github.com/igoradamenko/npm.plugin.zsh)
+* [geometry-zsh/geometry](https://github.com/geometry-zsh/geometry)
+
+### General Requirements
 
 See the respective pages for [bwpsm](https://github.com/baskerville/bspwm) / [sxhkd](https://github.com/baskerville/sxhkd) / [rofi](https://github.com/davatorium/rofi) / [polybar](https://github.com/polybar/polybar) for dependencies, or consider using a package manager like the [AUR](https://aur.archlinux.org/) with [yay](https://github.com/Jguer/yay) to make installation of these easier, if running something like [Arch](https://www.archlinux.org/) / [Manjaro](https://manjaro.org/) / [Artix](https://artixlinux.org/)
 
-### zsh
+### ZSH Requirements
 
 The pre-requisites for my ``zsh`` configuration are:
 
@@ -18,49 +32,13 @@ The pre-requisites for my ``zsh`` configuration are:
 * [pip](https://pypi.org/project/pip/)
 * [curl](https://curl.haxx.se/)
 
-Everything else is either already there or will be installed.
-
-## Dotfiles
-
-Dotfiles are given for the following:
-
-* [bwpsm](https://github.com/baskerville/bspwm)
-* [sxhkd](https://github.com/baskerville/sxhkd)
-* [rofi](https://github.com/davatorium/rofi)
-* [polybar](https://github.com/polybar/polybar)
-
-These can be located in [``config``](./config).
-
-### zsh
-
-The ``zshrc`` file relies on [antibody](https://getantibody.github.io/) to manage plugins.
-
-* Standard [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) plugins:
-  * git
-  * wd
-* Other plugins:
-  * [Valiev/almostontop](https://github.com/Valiev/almostontop)
-  * [Cloudstek/zsh-plugin-appup](https://github.com/Cloudstek/zsh-plugin-appup)
-  * [arzzen/calc.plugin.zsh](https://github.com/arzzen/calc.plugin.zsh)
-  * [ael-code/zsh-colored-man-pages](https://github.com/ael-code/zsh-colored-man-pages)
-  * [zsh-users/zsh-completions](https://github.com/zsh-users/zsh-completions)
-  * [athityakumar/colorls](https://github.com/athityakumar/colorls)
-  * [igoradamenko/npm.plugin.zsh](https://github.com/igoradamenko/npm.plugin.zsh)
-  * [geometry-zsh/geometry](https://github.com/geometry-zsh/geometry)
-
-- Ruby is used to install [athityakumar/colorls](https://github.com/athityakumar/colorls), making ``ls`` far prettier.
-- Pip is used to install [pwittchen/spotify-cli-linux](https://github.com/pwittchen/spotify-cli-linux), which allows some easy Spotify access from the command-line.
-
 ## Installation
 
-### dotfiles
+Many components can be installed by simply linking or copying files from [config](config) to the `$HOME/.config` or equivalent directory. 
 
-For any of the dotfiles in [``config``](./config), the directory can be put in one's own home directory's ``.config``. For example. if one wanted to use [``my bspwmrc file``](./config/bspwm/bspwmrc), it would go to ``$HOME/.config/bspwm/bspwmrc``.
-
-### zsh setup
+To install all or most of the included files, first:
 
 1. Clone the repository:
-
 ```sh
 git clone https://github.com/bradendubois/dotfiles <dotfile_location>
 ```
@@ -73,58 +51,60 @@ cd <dotfile_location>
 ```
 
 3. Open the file ``zshrc`` in your text editor of choice. Edit the following line:
-
 ```sh
 export DOTFILES="$HOME/dotfiles"
 ```
 
 such that ``DOTFILES`` points to wherever the repository is located on your machine.
 
-4. Remove any old ``.zshrc`` file from your home directory.
+### zsh
 
+1. Remove any old ``.zshrc`` file from your `$HOME`.
 ```sh
 rm ~/.zshrc
 ```
 
-5. Symlink the new ``.zshrc`` file in the dotfiles repository.
-
+2. Symlink the new ``.zshrc`` file in the dotfiles repository.
 ```sh
 ln zshrc ~/.zshrc
 ```
 
-6. Restart your terminal session.
+3. Restart your terminal session.
 
-7. Install [antibody](https://getantibody.github.io/).
+4. Install [antibody](https://getantibody.github.io/).
 
-8. Run the following:
-
+5. Run the following:
 ```sh
 antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh
 ```
 
 ### VS Code
 
-A list of extensions for [Visual Studio Code](https://code.visualstudio.com/) is provided as [config/code-extensions](config/code-extensions). Once VS Code has been installed, all extensions can be installed with:
+A list of extensions for [Visual Studio Code](https://code.visualstudio.com/) is provided at [config/code-extensions](config/code-extensions). Once VS Code has been installed, all extensions can be installed with:
 
 ```shell
 cat config/code-extensions | xargs -n 1 code --install-extension
 ```
 
-Optionally, **keybindings** and **settings** are also provided in [config/Code/User/](config/Code/User/){[keybindings.json](config/Code/User/keybindings.json), [config/Code/User/settings.json](settings.json)}.
+Optionally, **keybindings** and **settings** are also provided in [config/Code/User/](config/Code/User/){[keybindings.json](config/Code/User/keybindings.json), [settings.json](config/Code/User/settings.json)}.
 
-#### Optional Extras
+### Optional Extras
 
-9. Install [pwittchen/spotify-cli-linux](https://github.com/pwittchen/spotify-cli-linux) using [pip](https://pypi.org/project/pip/):
-```sh
-sudo pip install spotify-cli-linux
-```
+1. [athityakumar/colorls](https://github.com/athityakumar/colorls) can be used to make ``ls`` far prettier.
 
-10. Install  [athityakumar/colorls](https://github.com/athityakumar/colorls) using [rubygems](https://rubygems.org/):
+Install using [rubygems](https://rubygems.org/):
 ```sh
 gem install colorls
 ```
 
 **Note**: You may need to tweak your ``$PATH`` to include ``ruby``. See the file ``dotfiles/zsh/path`` for the easiest way to do so.
+
+2. [pwittchen/spotify-cli-linux](https://github.com/pwittchen/spotify-cli-linux) allows some easy Spotify access from the command-line.
+
+Install using [pip](https://pypi.org/project/pip/):
+```sh
+sudo pip install spotify-cli-linux
+```
 
 ## Acknowledgements
 
