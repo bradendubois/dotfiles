@@ -8,10 +8,10 @@ config/nvim/plugged/
 *.local
 
 # VS Code - Nothing but the user settings directory
-/config/Code\ -\ OSS/*
-!/config/Code\ -\ OSS/User/
+/config/Code/*
+!/config/Code/User/
 
 # VS Code - Nothing in the settings directory *except* the keybindings/settings files
-/config/Code\ -\ OSS/User/*
-!/config/Code\ -\ OSS/User/keybindings.json
-!/config/Code\ -\ OSS/User/settings.json
+/config/Code/User/*
+!/config/Code/User/keybindings.json
+!/config/Code/User/settings.json
