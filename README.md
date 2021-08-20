@@ -102,6 +102,16 @@ ln zshrc ~/.zshrc
 antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh
 ```
 
+### VS Code
+
+A list of extensions for [Visual Studio Code](https://code.visualstudio.com/) is provided as [config/code-extensions](config/code-extensions). Once VS Code has been installed, all extensions can be installed with:
+
+```shell
+cat config/code-extensions | xargs -n 1 code --install-extension
+```
+
+Optionally, **keybindings** and **settings** are also provided in [config/Code\ -\ OSS/User/](config/Code\ -\ OSS/User/){[keybindings.json](keybindings.json), [settings.json](settings.json)}.
+
 #### Optional Extras
 
 9. Install [pwittchen/spotify-cli-linux](https://github.com/pwittchen/spotify-cli-linux) using [pip](https://pypi.org/project/pip/):
