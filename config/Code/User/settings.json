@@ -8,7 +8,7 @@
     "workbench.colorTheme": "Tokyo Night Storm",
     "zenMode.fullScreen": false,
     "files.autoSave": "onFocusChange",
-    "editor.fontFamily": "'Fira Code Regular', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'FiraCode Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.renderWhitespace": "none",
     "editor.cursorStyle": "underline-thin",
     "files.exclude": {

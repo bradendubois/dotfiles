@@ -5,11 +5,7 @@ if [ $? ]; then
     alias tree="ls --tree"
 fi
 
-# Alias path to nice_path if it's found
-where nice_path > /dev/null;
-if [ $? ]; then
-    alias path="nice_path"
-fi
+alias path='echo $PATH | tr ":" "\n"'
 
 alias weather="curl wttr.in/Saskatoon"  # Check the weather
 alias parrot="curl parrot.live"         # It's kinda fun
@@ -41,4 +37,3 @@ alias status="git status "
 alias merge="git merge "
 alias stash="git stash "
 alias clone="git clone "
-

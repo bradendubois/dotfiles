@@ -34,7 +34,7 @@ The pre-requisites for my ``zsh`` configuration are:
 
 ## Installation
 
-Many components can be installed by simply linking or copying files from [config](config) to the `$HOME/.config` or equivalent directory. 
+Many components can be installed by simply linking or copying files from [config](config) to the `$HOME/.config` or equivalent directory.
 
 To install all or most of the included files, first:
 
@@ -78,6 +78,8 @@ ln zshrc ~/.zshrc
 antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh
 ```
 
+See the section **Static loading** [here](https://getantibody.github.io/usage/) for more details on bundling.
+
 ### VS Code
 
 A list of extensions for [Visual Studio Code](https://code.visualstudio.com/) is provided at [config/code-extensions](config/code-extensions). Once VS Code has been installed, all extensions can be installed with:
@@ -86,7 +88,16 @@ A list of extensions for [Visual Studio Code](https://code.visualstudio.com/) is
 cat config/code-extensions | xargs -n 1 code --install-extension
 ```
 
-Optionally, **keybindings** and **settings** are also provided in [config/Code/User/](config/Code/User/){[keybindings.json](config/Code/User/keybindings.json), [settings.json](config/Code/User/settings.json)}.
+Optionally, **keybindings** and **settings** are also provided in [config/Code/User/](config/Code/User/){[keybindings.json](config/Code/User/keybindings.json), [settings.json](config/Code/User/settings.json)}. These can be linked to the same directory under `$HOME/.config`.
+
+### Vim / Nvim
+
+To manage plugins for Vim / Nvim (though I use Nvim), install [junegunn/vim-plug](https://github.com/junegunn/vim-plug).
+
+After linking the `init.vim` [file](config/nvim/init.vim) under [config/nvim](config/nvim), run:
+```shell
+:PlugInstall
+```
 
 ### Optional Extras
 

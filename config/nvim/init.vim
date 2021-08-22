@@ -3,8 +3,8 @@ call plug#begin()
 
 " Aesthetics - Main
 Plug 'dracula/vim', { 'commit': '147f389f4275cec4ef43ebc25e2011c57b45cc00' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -38,8 +38,6 @@ Plug 'junegunn/vim-easy-align'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-abolish'
 " Plug 'Yggdroot/indentLine'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'chrisbra/Colorizer'
 Plug 'KabbAmine/vCoolor.vim'
@@ -52,8 +50,12 @@ Plug 'dkarter/bullets.vim'
 
 Plug 'lervag/vimtex'
 
-call plug#end()
+Plug 'itchyny/lightline.vim'
 
+" Plug 'dense-analysis/ale'
+" Plug 'vim-syntastic/syntastic'
+
+call plug#end()
 
 
 " Opaque Background (Comment out to use terminal's profile)
@@ -69,11 +71,22 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 set incsearch ignorecase smartcase hlsearch
 set ruler laststatus=2 showcmd showmode
 set list listchars=trail:»,tab:»-
-set fillchars+=vert:\ 
+set fillchars+=vert:\
 set wrap breakindent
 set encoding=utf-8
 set number
 set title
 
+
+map <C-o> :NERDTreeToggle<CR>
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+
+map <C-l> :ALEToggle<CR>
+
+
 syntax on
 colorscheme onedark
+
+let g:lightline = { 'colorscheme': 'one', 'background': 'dark' }

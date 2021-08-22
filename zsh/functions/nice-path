@@ -1,7 +1,0 @@
-#!/bin/zsh
-
-# Present the path nicer
-
-function nice_path() {
-    echo $PATH | tr ":" "\n"
-}
