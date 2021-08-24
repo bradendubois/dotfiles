@@ -99,6 +99,16 @@ After linking the `init.vim` [file](config/nvim/init.vim) under [config/nvim](co
 :PlugInstall
 ```
 
+### Picom
+
+While any [picom](https://wiki.archlinux.org/title/Picom) source should work, the [ibhagwan/picom](https://github.com/ibhagwan/picom) fork supports rounded corners, which is included in [my .conf file](config/picom/picom.conf).
+
+If using a distro like Arch Linux, Manjaro, or Artix Linux, the `picom-ibhagwan-git` package will work.
+
+```sh
+pacaur -S picom-ibhagwan-git
+```
+
 ### Optional Extras
 
 1. [athityakumar/colorls](https://github.com/athityakumar/colorls) can be used to make ``ls`` far prettier.
