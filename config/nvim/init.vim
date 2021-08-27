@@ -12,11 +12,12 @@ call plug#begin()
 
 
 """" general theming
-Plug 'shime/vim-livedown'       " live Markdown editor
-Plug 'joshdick/onedark.vim'     " One Dark color scheme
-Plug 'arcticicestudio/nord-vim' " Nord color scheme
-Plug 'ryanoasis/vim-devicons'   " icons
-Plug 'itchyny/lightline.vim'    " activity bar
+Plug 'shime/vim-livedown'                           " live Markdown editor
+Plug 'joshdick/onedark.vim'                         " One Dark color scheme
+Plug 'arcticicestudio/nord-vim'                     " Nord color scheme
+Plug 'folke/tokyonight.nvim', {'branch': 'main'}    " Tokyo Night
+Plug 'ryanoasis/vim-devicons'                       " icons
+Plug 'itchyny/lightline.vim'                        " activity bar
 
 
 """" functionality / major
@@ -74,8 +75,8 @@ syntax on
 
 " color scheme
 " colorscheme onedark
-colorscheme nord
-
+" colorscheme nord
+colorscheme tokyonight
 
 """""""""""""""""
 "   Settings    "
@@ -96,6 +97,9 @@ let g:pydocstring_formatter = 'numpy'
 
 
 let g:colorizer_auto_color = 1
+
+
+let g:tokyonight_style = "storm"
 
 
 " close the tab if NERDTree is the only window remaining in it.
