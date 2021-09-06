@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+
+# add a directory to PATH if it's a valid directory AND not already in PATH
+function add_to_path() {
+    if [ -d $1 ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH=${PATH}:$1
+    fi
+}
+
