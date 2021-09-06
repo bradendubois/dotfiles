@@ -4,29 +4,35 @@
 export DOTFILES="$HOME/dotfiles"
 
 # Directory of zsh-specific resources
-export ZSH=$DOTFILES/zsh
+ZSH=$DOTFILES/zsh
 
-# Source all custom configs
-for config in $ZSH/configs/*; do
-    source $config
+# All directories / files to source
+components=(
+    $ZSH/configs
+    $ZSH/functions
+    $ZSH/aliases
+    $ZSH/exports
+    $ZSH/path
+)
+
+
+for c in $components; do
+
+    [ -d $c ] && {
+        for f in $c/*; do
+             source $f
+        done
+    }
+
+    [ -f $c ] && {
+        source $c file
+
+        # any file can have a .local-suffixed duplicate that won't be tracked
+        #   by git; useful for sensitive / private data
+        [ -f $c.local ] && source $c.local
+    }
+
 done
-
-# Source all functions
-for function in $ZSH/functions/*; do
-    source $function
-done
-
-# source all aliases
-source $ZSH/aliases
-
-# source all exports
-source $ZSH/exports
-if [ -f $ZSH/exports.local ]; then
-    source $ZSH/exports.local
-fi
-
-# Add any extra paths to, uh, $PATH
-source $ZSH/path
 
 # Run the following command (once!) to create the following .sh file
 # antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh

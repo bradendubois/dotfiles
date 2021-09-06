@@ -1,12 +1,13 @@
+# 
 directories=(
-    ~/.gem/ruby/2.7.0/bin
-    ~/.gem/ruby/3.0.0/bin
-    ~/.local/bin
+    $HOME/.gem/ruby/2.7.0/bin
+    $HOME/.gem/ruby/3.0.0/bin
+    $HOME/.local/bin
+    $HOME/.cargo/bin
     /opt/riscv/bin
-    ~/.cargo/bin
 )
 
 for directory in $directories; do
-    PATH=$PATH:$directory
+    add_to_path $directory
 done
 
