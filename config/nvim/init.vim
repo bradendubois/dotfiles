@@ -105,6 +105,10 @@ let g:tokyonight_style = "storm"
 " close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
+" disable colorscheme background color change - uses terminal default
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+
+
 """""""""""""""""
 "   Mappings    "
 """""""""""""""""
