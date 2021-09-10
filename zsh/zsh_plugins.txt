@@ -11,6 +11,7 @@ ael-code/zsh-colored-man-pages
 zsh-users/zsh-completions
 athityakumar/colorls
 zsh-users/zsh-autosuggestions
+zpm-zsh/ls
 
 # geometry theme
 geometry-zsh/geometry
