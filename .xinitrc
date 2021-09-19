@@ -35,30 +35,44 @@ fi
 # Make the cursor not an X on spots like desktop area
 xsetroot -cursor_name left_ptr
 
-# Configure monitor layout
-xrandr --output DP-2 --primary --pos 1920x200
-
-xrandr --output HDMI-3 --pos 0x600
-# xrandr --output HDMI-1 --pos -1920x600
-
-xrandr --output DP-1 --right-of DP-2 --rotate left
 
 # Make sure displays won't blank
 xset -dpms s off
 
-# Start polybar
-~/.config/polybar/launch.sh &
+
+# Count monitors to separate desktop / laptop layout
+MONITORS=$(xrandr --listactivemonitors | wc -l | xargs -n 1 expr -1 +)
+
+# Desktop layout
+if [[ $MONITORS -eq 3 ]]; then
+    xrandr --output DP-2 --primary --pos 1920x200           # primary
+    xrandr --output HDMI-3 --pos 0x600                      # left secondary
+    xrandr --output DP-1 --right-of DP-2 --rotate left      # right secondary
+fi
+
+
+# polybar
+# killall -q polybar
+# polybar primary --config="$HOME/.config/polybar/config.ini" > /tmp/polybar.log 2>&1 &
+$HOME/.config/polybar/launch.sh
+
 
 # Load sxhkd and start bspwm
 exec sxhkd &
 
+
 # Load random wallpapers with feh
 feh --randomize --bg-fill --recursive pictures/wallpapers &
+
 
 # Start picom
 picom &
 
+
 # Hide cursor after idling
 unclutter -idle 1 &
 
+
+# bspwm
 exec bspwm
+

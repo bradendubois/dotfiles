@@ -34,6 +34,8 @@ for c in $components; do
 
 done
 
+autoload -U +X compinit && compinit
+
 # Run the following command (once!) to create the following .sh file
 # antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh
 source $ZSH/zsh_plugins.sh
