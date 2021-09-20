@@ -15,6 +15,7 @@ components=(
     $ZSH/path
 )
 
+autoload -U +X compinit && compinit
 
 for c in $components; do
 
@@ -35,6 +36,8 @@ for c in $components; do
 done
 
 autoload -U +X compinit && compinit
+
+compctl -M 'm:{a-zA-Z}={A-Za-z} r:|[_.-]=* r:|=*'
 
 # Run the following command (once!) to create the following .sh file
 # antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh
