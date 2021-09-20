@@ -1,15 +1,15 @@
 // rofi config.rasi
 
-
 configuration {
   display-run: " ";
   display-drun: "  ";
   display-window: "  ";
   drun-display-format: "{icon} {name}";
-//  font: "JetBrainsMono Nerd Font Medium 10";
+
+  // font: "JetBrainsMono Nerd Font Medium 10";
   font: "FiraCode Nerd Font Medium 10";
 
-  modi: "window,run,drun";
+  modi: "window,run,drun,windowcd,ssh,combi,keys,filebrowser";
   show-icons: true;
 
   icon-theme: "Papirus";
@@ -18,15 +18,15 @@ configuration {
 * {
 
   background-color: #2E3440;
-  
+
   default-background: #262525;
 
-//  selected-background: #737c7d;
+  // selected-background: #737c7d;
   selected-background: #47545e;
 
-// Mint-green-ish alternative
-//  text-default: #35ab99;
-//  text-selected: #3abaa7;
+  // Mint-green-ish alternative
+  // text-default: #35ab99;
+  // text-selected: #3abaa7;
 
   text-default: #1c7bad;
   text-selected: #327da6;
@@ -96,3 +96,4 @@ window {
   border: 2px;
   border-color: @border-color;
 }
+
