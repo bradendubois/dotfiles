@@ -1,10 +1,4 @@
-# Alias ls to colorls if it's found
-where better-auto-color-ls > /dev/null;
-if [ $? ]; then
-    # alias ls="colorls --gs --sd"
-    alias tree="ls --tree"
-fi
-
+alias cat='bat'
 alias path='echo $PATH | tr ":" "\n"'
 
 alias weather="curl wttr.in/Saskatoon"  # Check the weather
@@ -13,6 +7,8 @@ alias parrot="curl parrot.live"         # It's kinda fun
 # Move up a level
 alias ..="cd .."
 alias cd..=".."
+
+alias ~="cd ~"
 
 # needs spotify-cli installed: https://github.com/pwittchen/spotify-cli-linux
 alias playing="spotifycli --status"
@@ -39,4 +35,5 @@ alias merge="git merge "
 alias stash="git stash "
 alias clone="git clone "
 alias push-upstream="git push --set-upstream origin "
+alias unstage="git restore --staged "
 
