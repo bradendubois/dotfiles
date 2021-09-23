@@ -35,9 +35,10 @@ for c in $components; do
 
 done
 
-autoload -U +X compinit && compinit
+# case insensitive matching
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit
 
-compctl -M 'm:{a-zA-Z}={A-Za-z} r:|[_.-]=* r:|=*'
 
 # Run the following command (once!) to create the following .sh file
 # antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh
