@@ -26,7 +26,7 @@ for c in $components; do
     }
 
     [ -f $c ] && {
-        source $c file
+        source $c
 
         # any file can have a .local-suffixed duplicate that won't be tracked
         #   by git; useful for sensitive / private data
