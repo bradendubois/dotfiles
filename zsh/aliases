@@ -1,3 +1,5 @@
+#!/bin/env zsh
+
 alias cat='bat'
 alias path='echo $PATH | tr ":" "\n"'
 
@@ -37,3 +39,10 @@ alias clone="git clone "
 alias push-upstream="git push --set-upstream origin "
 alias unstage="git restore --staged "
 
+# XDG compliance
+[[ -z $XDG_CONFIG_HOME ]] || {
+
+    alias wget='wget --hts-file="$XDG_CACHE_HOME/wget-hsts"'
+    alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
+
+}

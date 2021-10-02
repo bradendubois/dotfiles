@@ -1,21 +1,15 @@
 #!/bin/zsh
 
-# Declare location of dotfiles (this folder!)
-export DOTFILES="$HOME/dotfiles"
-
-# Directory of zsh-specific resources
-ZSH=$DOTFILES/zsh
 
 # All directories / files to source
 components=(
-    $ZSH/configs
-    $ZSH/functions
-    $ZSH/aliases
-    $ZSH/exports
-    $ZSH/path
+    $ZDOTDIR/configs
+    $ZDOTDIR/functions
+    $ZDOTDIR/aliases
+    $ZDOTDIR/exports
+    $ZDOTDIR/path
 )
 
-autoload -U +X compinit && compinit
 
 for c in $components; do
 
@@ -35,12 +29,13 @@ for c in $components; do
 
 done
 
+
 # case insensitive matching
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-autoload -Uz compinit && compinit
+autoload -Uz +X compinit && compinit
 
 
 # Run the following command (once!) to create the following .sh file
 # antibody bundle < $ZSH/zsh_plugins.txt > $ZSH/zsh_plugins.sh
-source $ZSH/zsh_plugins.sh
+source $ZDOTDIR/zsh_plugins.sh
 

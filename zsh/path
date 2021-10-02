@@ -1,9 +1,9 @@
 # 
 directories=(
-    $HOME/.gem/ruby/2.7.0/bin
-    $HOME/.gem/ruby/3.0.0/bin
-    $HOME/.local/bin
-    $HOME/.cargo/bin
+    "$XDG_CONFIG_HOME"/gem/ruby/2.7.0/bin
+    "$XDG_CONFIG_HOME"/gem/ruby/3.0.0/bin
+    "$HOME"/.local/bin
+    "XDG_CONFIG_HOME"/cargo/bin
     /opt/riscv/bin
 )
 
