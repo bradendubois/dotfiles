@@ -46,10 +46,13 @@ super + {_,shift + }{j,k,i,l}
 super + shift + bracket{left,right}
 	bspc monitor -f {prev,next}
 
-# focus the last node/desktop
+# focus the previous/next desktop
 super + {_,shift + } grave
 	bspc desktop -f {next, prev}.local
 
+# focus the previous node
+super + BackSpace
+    bspc node -f last
 
 ##### local
 

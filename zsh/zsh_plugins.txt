@@ -12,6 +12,8 @@ zsh-users/zsh-completions
 athityakumar/colorls
 zsh-users/zsh-autosuggestions
 zpm-zsh/ls
+MichaelAquilina/zsh-you-should-use
 
 # geometry theme
 geometry-zsh/geometry
+
