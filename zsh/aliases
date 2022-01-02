@@ -11,6 +11,9 @@ alias ls="ls -AG"
 # Move up a level
 alias ..="cd .."
 alias cd..=".."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 alias ~="cd ~"
 
