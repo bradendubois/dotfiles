@@ -1,5 +1,5 @@
 #!/bin/zsh
-export DOTFILES="$HOME/Projects/dotfiles"
+export DOTFILES="$HOME/dotfiles"
 export ZDOTDIR="$DOTFILES/zsh"
 [ -f "$ZDOTDIR/zprofiles/zprofile" ] && . "$ZDOTDIR/zprofiles/zprofile"
 
