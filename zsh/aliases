@@ -6,6 +6,8 @@ alias path='echo $PATH | tr ":" "\n"'
 alias weather="curl wttr.in/Saskatoon"  # Check the weather
 alias parrot="curl parrot.live"         # It's kinda fun
 
+alias ls="ls -AG"
+
 # Move up a level
 alias ..="cd .."
 alias cd..=".."

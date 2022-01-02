@@ -1,0 +1,7 @@
+# zsh .gitignore
+
+zsh_plugins.sh
+histfile
+.zsh_sessions
+.zcompdump
+

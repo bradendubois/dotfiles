@@ -4,14 +4,14 @@
 ohmyzsh/ohmyzsh path:plugins/wd
 
 # plugins
-Valiev/almostontop
+# Valiev/almostontop
 Cloudstek/zsh-plugin-appup
 arzzen/calc.plugin.zsh
 ael-code/zsh-colored-man-pages
 zsh-users/zsh-completions
 athityakumar/colorls
 zsh-users/zsh-autosuggestions
-zpm-zsh/ls
+# zpm-zsh/ls
 MichaelAquilina/zsh-you-should-use
 
 # geometry theme
