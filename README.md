@@ -44,12 +44,12 @@ where ``<dotfile_location>`` is the desired location on your machine for this re
 export DOTFILES="$HOME/dotfiles"
 ```
 
-such that ``DOTFILES`` points to wherever the repository is located on your machine. This `zprofile-start` file will be used as an easy way to link a few crucial environment variables to this repository so that most remaining components (should) ✨ *just work* ✨.
+such that ``DOTFILES`` points to wherever the repository is located on your machine. This `zprofile-start` file will be used as an easy way to point a few crucial environment variables to this repository so that most remaining components should ✨ *just work* ✨.
 
 3. Symlink this `zprofile-start` file in the dotfiles repository to your `HOME` directory as `.zprofile`:
 
 ```sh
-ln dotfile/zsh/zprofiles/zprofile-start ~/.zprofile
+ln dotfiles/zsh/zprofiles/zprofile-start ~/.zprofile
 ```
 
 **Note**: Based on your current working directory, where the repository is cloned, etc., you may need to tweak the first argument, `dotfiles/zsh/zprofiles/zprofile-start`, to point to the `zprofile-start` file.
