@@ -67,7 +67,7 @@ Thanks to `antibody` and some refactors, this section has gotten a lot shorter!
 
 #### miscellanea
 
-* `Antibody` uses **"static loading** to make loading plugins faster. See the section **Static loading** [here](https://getantibody.github.io/usage/) for more details on bundling.
+* `Antibody` uses **"static loading"** to make loading plugins faster. See the section **Static loading** [here](https://getantibody.github.io/usage/) for more details on bundling.
 * My `zsh` configuration is made to load unique *different files* depending on the operating system detected by running `uname`. This can be used to load different files depending on **macOS** or **Linux** being used. This can be seen in the [.zshrc](zsh/.zshrc) and [zprofile](zsh/zprofiles/zprofile) files included.
 
 ### .config setup
@@ -91,9 +91,11 @@ ln -sv $DOTFILES/config ~/.config
 
 This last step could be different, depending on your preference and desire for [XDG Base Directories](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html). This is not necessary to change, and will work as-is, but one might wish to set their `XDG_CONFIG_HOME` directory somewhere else. My `XDG_` environment variables are set in [zsh/zprofiles/zprofile](zsh/zprofiles/zprofile), and can be tweaked. Of course, doing so will require a fresh login to take effect.
 
+Also, in order to start tracking one's own files in [config](config), one may wish to tweak the [`.gitignore` file in the `config` subdirectory](config/.gitignore), as it may be a poor idea to track **everything**. This may be a lot of *unnecessary* or *sensitive* files, and one should be careful as to what begins being tracked by `git`.
+
 ### Application-Specific setup
 
-Here are a handful of ways to start using the provided config files for various applications.
+Here are a handful of ways to start using the provided config files for various applications. These files are located in [config](config).
 
 #### VS Code
 
@@ -133,7 +135,7 @@ pacaur -S picom-ibhagwan-git
 If ...
 
 * the directions are not working as expected
-* you have some fun suggestions for **zsh** plugins you like
+* have some fun suggestions for **zsh** plugins you like
 * you have questions or suggestions on how to improve the setup or documentation
 
 then [email me](mailto:braden.dubois@usask.ca)!
