@@ -1,0 +1,22 @@
+# config .gitignore
+
+# lots of configurations are useless to include, or contain sensitive details,
+#   so we exclude everything, and otherwise opt-in specific directories
+
+nvim/plugged
+
+Code/*
+!Code/User
+
+Code/User/*
+!Code/User/keybindings.json
+!Code/User/settings.json
+
+deluge
+
+gh/*
+!gh/config.yml
+
+iterm2
+StardewValley
+
