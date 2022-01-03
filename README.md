@@ -81,10 +81,10 @@ mv ~/.config/* $DOTFILES/config
 
 2. Remove the now-empty `.config` folder:
 ```sh
-rm -r .config
+rm -r ~/.config
 ```
 
-3. Symlink the repository's `config` folder to the home directory: 
+3. Symlink the repository's `config` folder to the `$HOME` directory as `.config`: 
 ```sh
 ln -sv $DOTFILES/config ~/.config
 ```
